@@ -5,13 +5,6 @@ from scipy.ndimage import uniform_filter1d
 import itertools
 import pandas as pd
 
-# Load waveform data
-file1 = pd.read_csv('noise_traces.csv')
-file2 = pd.read_csv('traces.csv')
-
-time = np.array(file1['times'])
-waveform = np.array(file2['traces'])
-#waveform = np.array(file1['traces'])
 def calculate_p2p(waveform):
     """
     Identifies and calculates the peak-to-peak (P2P) value using a sliding window approach.
